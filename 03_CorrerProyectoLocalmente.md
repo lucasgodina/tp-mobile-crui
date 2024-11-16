@@ -39,7 +39,13 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-### Paso 4: Migrar la base de datos
+### Paso 4: Instalar las dependencias
+
+```bash
+composer install
+```
+
+### Paso 5: Migrar la base de datos
 
 Ejecutar las migraciones para crear las tablas necesarias para la base de datos
 
