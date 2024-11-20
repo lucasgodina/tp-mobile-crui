@@ -48,4 +48,7 @@ En la carpeta /app/Models/ editar los modelos, estableciendo las relaciones.
 
 ## Paso 5: Crear los controladores
 
-Crear los controladores según las funciones que va a cumplir nuestra página:
+En la carpeta /app/Http/Controllers se crean los siguientes controladores:
+
+-   EquipoController.php
+-   JuegoController.php
