@@ -10,56 +10,92 @@ class JuegoController extends Controller
 {
     public function index()
     {
+        // Obtener todos los registros
         $juegos = Juego::all();
 
         return view('juegos.index', compact('juegos'));
     }
 
+    // FUNCIONES CRUD
     /**
-     * Show the form for creating a new resource.
+     * Muestra la vista para crear un nuevo registro.
      */
     public function create()
     {
-        //
+        return view('juegos.create');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Guarda el nuevo registro en el almacenamiento.
      */
     public function store(Request $request)
     {
-        //
+        // Validar los datos
+        $request->validate([
+            'nombre' => 'required|string|max:255',
+        ]);
+
+        // Crear un nuevo registro
+        Juego::create($request->all());
+
+        // Redireccionar a la vista index
+        return redirect()->route('juegos.index')->with('success', 'Juego creado correctamente.');
     }
 
     /**
-     * Display the specified resource.
+     * Muestra el registro especificado.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $juego = Juego::findOrFail($id);
+
+        return view('juegos.show', compact('juego'));
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Muestra la vista para editar el registro especificado.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        // Buscar el registro
+        $juego = Juego::findOrFail($id);
+
+        // Editar el registro
+        return view('juegos.edit', compact('juego'));
     }
 
     /**
-     * Update the specified resource in storage.
+     * Actualiza el registro especificado en el almacenamiento.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+        // Validar los datos
+        $request->validate([
+            'nombre' => 'required|string|max:255',
+        ]);
+
+        // Buscar el registro
+        $juego = Juego::findOrFail($id);
+
+        // Actualizar el registro
+        //$juego->update($request->all());
+
+        $juego->nombre = $request->nombre;
+        $juego->save();
+
+        // Redireccionar a la vista index
+        return redirect()->route('juegos.index')->with('success', 'Juego actualizado correctamente.');
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Elimina el registro especificado del almacenamiento.
      */
-    public function destroy(string $id)
+    public function destroy(Juego $juego)
     {
-        //
+        // Eliminar el registro
+        $juego->delete();
+
+        // Redireccionar a la vista index
+        return redirect()->route('juegos.index')->with('success', 'Juego eliminado correctamente.');
     }
 }

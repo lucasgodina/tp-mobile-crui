@@ -48,7 +48,19 @@ En la carpeta /app/Models/ editar los modelos, estableciendo las relaciones.
 
 ## Paso 5: Crear los controladores
 
-En la carpeta /app/Http/Controllers se crean los siguientes controladores:
+```bash
+php artisan make:controller EquipoController
+php artisan make:controller JuegoController
+```
 
--   EquipoController.php
--   JuegoController.php
+Se editan los controladores según las funciones CRUD (Create, Read, Update, Delete).
+
+## Paso 6: Crear las rutas
+
+Se crean las rutas necesarias en el archivo /routes/web.php
+
+## Paso 7: Crear las vistas
+
+Se crean las 4 vistas necesarias por cada tabla.
+
+## Paso 8: MORIR
