@@ -19,7 +19,7 @@ cd xampp/htdocs/tp-mobile-crui
 
 ## Paso 3: Crear una base de datos y configurar el entorno
 
-Utilizando Xampp, a traves de la url [localhost/phpmyadmin](localhost/phpmyadmin) creamos una base de datos llamada "X".
+Utilizando Xampp, a traves de la url [localhost/phpmyadmin](localhost/phpmyadmin) creamos una base de datos llamada "equipos_esports".
 
 Luego creamos el archivo .env
 
@@ -34,7 +34,7 @@ Configuramos la base de datos en el archivo .env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=x
+DB_DATABASE=equipos_esports
 DB_USERNAME=root
 DB_PASSWORD=
 ```
