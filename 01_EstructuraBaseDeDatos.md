@@ -4,7 +4,7 @@
 
 ```plaintext
 +------------+-------------------+------+-----+---------+----------------+
-| Field      | Type              | Null | Key | Default | Extra          |
+| Campo      | Tipo              | Null | Key | Default | Extra          |
 +------------+-------------------+------+-----+---------+----------------+
 | id         | bigint unsigned   | NO   | PRI | NULL    | auto_increment |
 | nombre     | varchar(255)      | NO   |     | NULL    |                |
@@ -22,7 +22,7 @@
 
 ```plaintext
 +------------+-------------------+------+-----+---------+----------------+
-| Field      | Type              | Null | Key | Default | Extra          |
+| Campo      | Tipo              | Null | Key | Default | Extra          |
 +------------+-------------------+------+-----+---------+----------------+
 | id         | bigint unsigned   | NO   | PRI | NULL    | auto_increment |
 | nombre     | varchar(255)      | NO   |     | NULL    |                |
