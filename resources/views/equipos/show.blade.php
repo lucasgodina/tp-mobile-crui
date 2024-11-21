@@ -7,7 +7,7 @@
     <p>Email: {{ $equipo->email }}</p>
     <p>Fecha de fundación: {{ \Carbon\Carbon::parse($equipo->fecha_fundacion)->format('d-m-Y') }}</p>
     <p>Activo: {{ $equipo->activo ? 'Si' : 'No' }}</p>
-    <p>Victorias: {{ floor($equipo->victorias) }}</p>
+    <p>Victorias: {{ $equipo->victorias }}</p>
     <p>Juego: {{ $equipo->juego->nombre }}</p>
     <a href="{{ route('equipos.index') }}" title="Volver al listado" class="btn btn-secondary">
         <span class="material-symbols-outlined">arrow_back</span>

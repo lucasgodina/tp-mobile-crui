@@ -13,7 +13,7 @@
         @csrf
         <div class="mb-3">
             <label class="form-label" for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre" class="form-control"> value="{{ old('nombre') }}">
+            <input type="text" name="nombre" id="nombre" class="form-control" value="{{ old('nombre') }}">
         </div>
         <div class="mb-4">
             <button type="submit" class="btn btn-primary">Crear juego</button>

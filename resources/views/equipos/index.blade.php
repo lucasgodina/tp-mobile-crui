@@ -30,7 +30,7 @@
                         <td>{{ $equipo->email }}</td>
                         <td>{{ \Carbon\Carbon::parse($equipo->fecha_fundacion)->format('d-m-Y') }}</td>
                         <td>{{ $equipo->activo ? 'Sí' : 'No' }}</td>
-                        <td>{{ floor($equipo->victorias) }}</td>
+                        <td>{{ $equipo->victorias }}</td>
                         <td>{{ $equipo->juego->nombre }}</td>
                         <td>
                             <a href="{{ route('equipos.show', $equipo->id) }}" class="btn btn-info"

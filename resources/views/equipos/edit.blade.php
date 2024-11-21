@@ -32,7 +32,7 @@
         </div>
         <div class="mb-3">
             <label for="victorias" class="form-label">Victorias</label>
-            <input type="number" name="victorias" id="victorias" value="{{ old('victorias', floor($equipo->victorias)) }}" class="form-control">
+            <input type="number" name="victorias" id="victorias" value="{{ old('victorias', $equipo->victorias) }}" class="form-control">
         </div>
         <div class="mb-3">
             <label for="juego_id" class="form-label">Juego</label>
