@@ -37,7 +37,7 @@
                                 title="Ver"><span class="material-symbols-outlined">visibility</span></a>
                             {{-- <a href="{{ route('equipos.edit', $equipo->id) }}" class="btn btn-warning"
                             title="Editar"><span class="material-symbols-outlined">edit</span></a> --}}
-                            <form action="{{ route('equipos.destroy', $equipo->id) }}" method="POST">
+                            <form action="{{ route('equipos.destroy', $equipo->id) }}" method="POST" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este equipo?');">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger" title="Eliminar"><span
