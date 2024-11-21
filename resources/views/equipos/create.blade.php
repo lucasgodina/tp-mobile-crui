@@ -1,31 +1,56 @@
-<div>
-    <h1>Crear Equipo</h1>
+@extends('layouts.app')
+@section('content')
     <div>
+        <h1 class="text-center mt-4">CREAR EQUIPO</h1>
         @if ($errors->any())
-        <ul>
-            @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-        @endif
-        <form action="{{ route('equipos.store')}}" method="POST">
-            @csrf
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email">
-            <label for="fecha_fundacion">Fecha fundación</label>
-            <input type="date" name="fecha_fundacion" id="fecha_fundacion">
-            <label for="activo">Activo</label>
-            <input type="checkbox" name="activo" id="activo">
-            <label for="victorias">Victorias</label>
-            <input type="number" name="victorias" id="victorias">
-            <label for="juego_id">Juego</label>
-            <select name="juego_id" id="juego_id">
-                @foreach($juegos as $juego)
-                <option value="{{ $juego->id }}">{{ $juego->nombre }}</option>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
                 @endforeach
-            </select>
-            <button type="submit">Crear</button>
+            </ul>
+        @endif
+        <form action="{{ route('equipos.store') }}" method="POST" class="col-4 p-4 m-auto">
+            @csrf
+            <div class="mb-3">
+
+            </div>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" name="nombre" id="nombre" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" id="email" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="fecha_fundacion" class="form-label">Fecha fundación</label>
+                <input type="date" name="fecha_fundacion" id="fecha_fundacion" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="activo" class="form-check-label">Activo</label>
+                <input type="checkbox" name="activo" id="activo" class="form-check-input">
+            </div>
+            <div class="mb-3">
+                <label for="victorias" class="form-label">Victorias</label>
+                <input type="number" name="victorias" id="victorias" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="juego_id" class="form-label">Juego</label>
+                <select name="juego_id" id="juego_id" class="form-select">
+                    @foreach ($juegos as $juego)
+                        <option value="{{ $juego->id }}">{{ $juego->nombre }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="mb-4">
+                <button type="submit" class="btn btn-primary">Crear equipo</button>
+            </div>
+            <div class="mb-3">
+                <a href="{{ route('equipos.index') }}" title="Volver al listado" class="btn btn-secondary">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </a>
+            </div>
+
         </form>
     </div>
+@endsection

@@ -1,31 +1,46 @@
-<div class="container">
-    <h1>Juegos</h1>
-    <a href="{{ route('juegos.create') }}">Crear Juego</a>
-    @if (session('success'))
-    <div class="alert alert-success">{{ session('success') }}</div>
-    @endif
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($juegos as $juego)
-            <tr>
-                <td>{{ $juego->id }}</td>
-                <td>{{ $juego->nombre }}</td>
-                <td>
-                    <a href="{{ route('juegos.show', $juego->id) }}">Ver</a>
-                    <a href="{{ route('juegos.edit', $juego->id) }}">Editar</a>
-                    <form action="{{ route('juegos.destroy', $juego->id) }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit">Eliminar</button>
-                    </form>
-                </td>
-            </tr>
-            @endforeach
-    </table>
-</div>
+@extends('layouts.app')
+@section('content')
+    <div class="container">
+        @if (session('success'))
+            <div class="alert alert-success">{{ session('success') }}</div>
+        @endif
+
+        <div class="container-sm">
+            <div class="col-8 p-4 m-auto">
+                <h1 class="text-center">JUEGOS</h1>
+                <table class="table table-hover table-borderless text-center">
+                    <thead>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Acciones</th>
+                    </thead>
+                    <tbody>
+                        @foreach ($juegos as $juego)
+                            <tr>
+                                <td>{{ $juego->id }}</td>
+                                <td>{{ $juego->nombre }}</td>
+                                <td>
+                                    <a href="{{ route('juegos.show', $juego->id) }}" class="btn btn-info" title="Ver"><span
+                                        class="material-symbols-outlined">visibility</span></a>
+                                    {{-- <a href="{{ route('juegos.edit', $juego->id) }}" class="btn btn-warning" title="Editar"><span
+                                            class="material-symbols-outlined">edit</span></a> --}}
+                                    <form action="{{ route('juegos.destroy', $juego->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger" title="Eliminar"><span
+                                                class="material-symbols-outlined">delete</span></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
+                </table>
+
+            </div>
+            <div class="container text-center">
+                <a href="{{ route('juegos.create') }}" class="btn btn-primary">Crear Juego</a>
+            </div>
+
+
+        </div>
+    </div>
+@endsection
