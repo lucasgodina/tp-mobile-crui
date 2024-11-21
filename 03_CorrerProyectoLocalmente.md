@@ -34,11 +34,7 @@ Configuramos la base de datos en el archivo .env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-<<<<<<< HEAD
 DB_DATABASE=equipos_esports
-=======
-DB_DATABASE=equipos:esports
->>>>>>> 392abfda7e9da33a2551ee6538430c5bdf44570e
 DB_USERNAME=root
 DB_PASSWORD=
 ```

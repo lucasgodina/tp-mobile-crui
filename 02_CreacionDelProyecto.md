@@ -58,9 +58,16 @@ Se editan los controladores según las funciones CRUD (Create, Read, Update, Del
 ## Paso 6: Crear las rutas
 
 Se crean las rutas necesarias en el archivo /routes/web.php
+Para traer todas las rutas utilizamos:
+
+```bash
+Route::resource('X', XController::class);
+```
 
 ## Paso 7: Crear las vistas
 
 Se crean las 4 vistas necesarias por cada tabla.
-
-## Paso 8: MORIR
+Create: Formulario de creación de Equipo o Juego
+Edit: Formulario para editar el Equipo o Juego
+Index: Vista para mostrar una lista de Equipos o Juegos
+Show: Vista para mostrar un Equipo o Juego mas detalladamente.
