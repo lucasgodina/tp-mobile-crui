@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string("email")->unique(); // Hace que el email sea único
             $table->date("fecha_fundacion");
             $table->boolean("activo")->default(true);
-            $table->decimal("victorias");
+            $table->integer("victorias");
             $table->foreignId("juego_id")->constrained("juegos");
             $table->timestamps(); // Crea los campos de creación y actualización del registro
         });
