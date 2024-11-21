@@ -1,5 +1,12 @@
 # Cómo correr este proyecto de manera local
 
+## Paso 0: Instalar las aplicaciones necesarias
+
+Git: TODO
+Xampp: TODO
+Php: TODO
+Composer: TODO
+
 ## Paso 1: Clonar el proyecto
 
 Clonar este proyecto en la carpeta ~/xampp/htdocs
