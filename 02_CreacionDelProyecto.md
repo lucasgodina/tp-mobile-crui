@@ -67,7 +67,16 @@ Route::resource('X', XController::class);
 ## Paso 7: Crear las vistas
 
 Se crean las 4 vistas necesarias por cada tabla.
+
 Create: Formulario de creación de Equipo o Juego
 Edit: Formulario para editar el Equipo o Juego
 Index: Vista para mostrar una lista de Equipos o Juegos, se puede acceder a la edición o eliminación de los mismos
 Show: Vista para mostrar un Equipo o Juego mas detalladamente
+
+## Adicionales a tener en cuenta:
+
+Vistas:
+
+-   Se utilizo Carbon para formatear las fechas en formato DD-MM-YY
+-   Se utiliza floor() para que los números no se muestren con decimales en las distintas vistas
+-   Se utiliza old() para retener los datos en los formularios y que el mismo no se "resetee"
