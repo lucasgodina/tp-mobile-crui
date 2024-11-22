@@ -68,10 +68,10 @@ Route::resource('X', XController::class);
 
 Se crean las 4 vistas necesarias por cada tabla.
 
-Create: Formulario de creación de Equipo o Juego
-Edit: Formulario para editar el Equipo o Juego
-Index: Vista para mostrar una lista de Equipos o Juegos, se puede acceder a la edición o eliminación de los mismos
-Show: Vista para mostrar un Equipo o Juego mas detalladamente
+- Create: Formulario de creación de Equipo o Juego
+- Edit: Formulario para editar el Equipo o Juego
+- Index: Vista para mostrar una lista de Equipos o Juegos, se puede acceder a la edición o eliminación de los mismos
+- Show: Vista para mostrar un Equipo o Juego mas detalladamente
 
 ## Adicionales a tener en cuenta:
 
