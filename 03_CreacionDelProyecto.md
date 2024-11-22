@@ -2,7 +2,7 @@
 
 ## Paso 1: Crear el Proyecto con Composer
 
-Para iniciar el proyecto, utilizamos Composer para crear una nueva aplicación. Ejecuta el siguiente comando en tu terminal:
+Para iniciar el proyecto, utilizamos Composer para crear una nueva aplicación. Ejecutamos el siguiente comando en la terminal:
 
 ```bash
 composer create-project --prefer-dist laravel/laravel tp-mobile-crui
@@ -57,7 +57,7 @@ Se editan los controladores según las funciones CRUD (Create, Read, Update, Del
 
 ## Paso 6: Crear las rutas
 
-Se crean las rutas necesarias en el archivo /routes/web.php
+Se crean las rutas necesarias en el archivo /routes/web.php.
 Para traer todas las rutas utilizamos:
 
 ```bash
@@ -78,5 +78,4 @@ Show: Vista para mostrar un Equipo o Juego mas detalladamente
 Vistas:
 
 -   Se utilizo Carbon para formatear las fechas en formato DD-MM-YY
--   Se utiliza floor() para que los números no se muestren con decimales en las distintas vistas
 -   Se utiliza old() para retener los datos en los formularios y que el mismo no se "resetee"
