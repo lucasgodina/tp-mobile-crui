@@ -9,6 +9,7 @@
         @endforeach
     </ul>
     @endif
+
     <form action="{{ route('equipos.store') }}" method="POST" class="col-4 p-4 m-auto">
         @csrf
         <div class="mb-3">

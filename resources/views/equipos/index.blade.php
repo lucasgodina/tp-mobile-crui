@@ -4,6 +4,9 @@
     @if (session('success'))
     <div class="alert alert-success">{{ session('success') }}</div>
     @endif
+    @if (session('error'))
+    <div class="alert alert-danger">{{ session('error') }}</div>
+    @endif
     <div class="container-sm">
         <div class="col-8 p-4 m-auto">
             <h1 class="text-center">EQUIPOS</h1>
@@ -28,7 +31,7 @@
                         <td>{{ $equipo->id }}</td>
                         <td>{{ $equipo->nombre }}</td>
                         <td>{{ $equipo->email }}</td>
-                        <td>{{ \Carbon\Carbon::parse($equipo->fecha_fundacion)->format('d-m-Y') }}</td>
+                        <td>{{ \Carbon\Carbon::parse($equipo->fecha_fundacion)->format('d/m/Y') }}</td>
                         <td>{{ $equipo->activo ? 'Sí' : 'No' }}</td>
                         <td>{{ $equipo->victorias }}</td>
                         <td>{{ $equipo->juego->nombre }}</td>

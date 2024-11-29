@@ -4,6 +4,9 @@
     @if (session('success'))
     <div class="alert alert-success">{{ session('success') }}</div>
     @endif
+    @if (session('error'))
+    <div class="alert alert-danger">{{ session('error') }}</div>
+    @endif
     <div class="container-sm">
         <div class="col-8 p-4 m-auto">
             <h1 class="text-center">JUEGOS</h1>

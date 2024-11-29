@@ -27,6 +27,10 @@ class EquipoController extends Controller
     public function create()
     {
         $juegos = Juego::all();
+
+        if ($juegos->isEmpty()) {
+            return redirect()->route('equipos.index')->with('error', 'No se puede crear un equipo porque no hay juegos disponibles.');
+        }
         return view('equipos.create', compact('juegos'));
     }
 
