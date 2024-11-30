@@ -9,6 +9,7 @@ use App\Models\Juego;
 
 class EquipoController extends Controller
 {
+
     /**
      * Muestra la vista para crear un nuevo registro.
      */

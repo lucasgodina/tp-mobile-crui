@@ -8,6 +8,9 @@ use App\Models\Juego;
 
 class JuegoController extends Controller
 {
+    /**
+     * Muestra la vista para crear un nuevo registro.
+     */
     public function index()
     {
         // Obtener todos los registros
