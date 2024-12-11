@@ -13,5 +13,6 @@ class Juego extends Model
     public function equipos()
     {
         return $this->hasMany(Equipo::class, "juego_id");
+        /*1 juego muchos equipos*/ 
     }
 }
