@@ -95,6 +95,11 @@ class JuegoController extends Controller
      */
     public function destroy(Juego $juego)
     {
+        // Verificar si algún equipo está relacionado con el juego
+        if ($juego->equipos->count() > 0) {
+            return redirect()->route('juegos.index')->with('error', "No se puede eliminar el juego {$juego->nombre} porque tiene equipos relacionados.");
+        }
+
         // Eliminar el registro
         $juego->delete();
 

@@ -61,7 +61,7 @@ Ejecutar las migraciones para crear las tablas necesarias para la base de datos
 php artisan migrate
 ```
 
-### Paso 5: Iniciar el servidor:
+### Paso 6: Iniciar el servidor:
 
 Dar inicio al servidor de desarrollo de Laravel
 
