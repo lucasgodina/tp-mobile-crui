@@ -22,9 +22,16 @@ Ejemplo:
 
 ```bash
 cd xampp/htdocs/tp-mobile-crui
+
 ```
 
-## Paso 3: Crear una base de datos y configurar el entorno
+### Paso 3: Instalar las dependencias
+
+```bash
+composer install
+```
+
+## Paso 4: Crear una base de datos y configurar el entorno
 
 Utilizando Xampp, a traves de la url [localhost/phpmyadmin](localhost/phpmyadmin) creamos una base de datos llamada "equipos_esports".
 
@@ -44,12 +51,6 @@ DB_PORT=3306
 DB_DATABASE=equipos_esports
 DB_USERNAME=root
 DB_PASSWORD=
-```
-
-### Paso 4: Instalar las dependencias
-
-```bash
-composer install
 ```
 
 ### Paso 5: Migrar la base de datos
