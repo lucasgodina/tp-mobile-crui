@@ -10,6 +10,8 @@ MVC (Model-View-Controller // Modelo-Vista-Controlador) es un patrón de diseño
 2. Vista (View): Es la interfaz de usuario. Se encarga de presentar los datos al usuario y de recibir la interacción del usuario.
 3. Controlador (Controller): Actúa como intermediario entre el modelo y la vista. Recibe las entradas del usuario desde la vista, procesa la lógica de negocio a través del modelo y actualiza la vista con los datos resultantes.
 
+### Vistas
+
 ## Archivo .env
 ### ¿Cuál es la finalidad del archivo .env?
 
@@ -21,3 +23,5 @@ El archivo .env en Laravel se utiliza para almacenar configuraciones y variables
 - Otros parámetros de configuración sensibles
 
 El uso del archivo .env permite mantener estas configuraciones fuera del código fuente, facilitando la gestión de diferentes entornos y mejorando la seguridad al no incluir información sensible en el repositorio de GitHub.
+
+## Migraciones
