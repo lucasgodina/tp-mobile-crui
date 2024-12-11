@@ -13,9 +13,6 @@
     <form action="{{ route('equipos.store') }}" method="POST" class="col-4 p-4 m-auto">
         @csrf
         <div class="mb-3">
-
-        </div>
-        <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
             <input type="text" name="nombre" id="nombre" class="form-control" value="{{old('nombre')}}">
         </div>
