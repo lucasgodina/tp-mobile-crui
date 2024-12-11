@@ -11,7 +11,7 @@ class EquipoController extends Controller
 {
 
     /**
-     * Muestra la vista para crear un nuevo registro.
+     * Muestra la vista principal con todos los registros.
      */
     public function index()
     {
@@ -23,11 +23,13 @@ class EquipoController extends Controller
 
     // FUNCIONES CRUD
     /**
-     * Muestra la vista para crear un nuevo registro.
+     * Muestra la vista de creación de un nuevo registro.
      */
     public function create()
     {
         $juegos = Juego::all();
+
+        // Si no hay juegos disponibles, redirigir a la vista index
 
         if ($juegos->isEmpty()) {
             return redirect()->route('equipos.index')->with('error', 'No se puede crear un equipo porque no hay juegos disponibles.');
