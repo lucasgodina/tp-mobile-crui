@@ -18,7 +18,7 @@ return new class extends Migration
             $table->date("fecha_fundacion");
             $table->boolean("activo")->default(true);
             $table->integer("victorias");
-            $table->foreignId("juego_id")->constrained("juegos");
+            $table->foreignId("juego_id")->constrained("juegos");// trae el id de la tabla juegos
             $table->timestamps(); // Crea los campos de creación y actualización del registro
         });
     }
