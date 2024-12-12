@@ -50,3 +50,16 @@ Las migraciones en Laravel son una forma de gestionar la estructura de la base d
    Para crear una nueva migración, se utiliza el comando:
    ```sh
    php artisan make:migration nombre_de_la_migracion
+    ```
+2. **Definir la estructura:**
+   En el archivo de migración generado, se definen las tablas y columnas en los métodos up y down. El método up se utiliza para aplicar los cambios, y el método down para revertirlos.
+3. **Ejecutar las migraciones:**
+   Para aplicar todas las migraciones pendientes y actualizar la base de datos, se utiliza el comando:
+   ```sh
+   php artisan migrate
+   ```
+4. **Revertir migraciones**
+   Para revertir la última migración ejecutada, se utiliza el comando:
+   ```sh
+   php artisan migrate:rollback
+   ```
