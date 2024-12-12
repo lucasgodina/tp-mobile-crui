@@ -17,9 +17,10 @@ class Equipo extends Model
         'victorias',
         'juego_id',
     ];
-    /* establece la relación 1 juego 1 juego (1 a 1) */
+    
     public function juego()
     {
         return $this->belongsTo(Juego::class, "juego_id");
+        /* establece la relación 1 juego 1 equipo (1 a 1) */
     }
 }
