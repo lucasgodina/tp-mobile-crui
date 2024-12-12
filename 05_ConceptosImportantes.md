@@ -11,6 +11,21 @@ MVC (Model-View-Controller // Modelo-Vista-Controlador) es un patrón de diseño
 3. Controlador (Controller): Actúa como intermediario entre el modelo y la vista. Recibe las entradas del usuario desde la vista, procesa la lógica de negocio a través del modelo y actualiza la vista con los datos resultantes.
 
 ### Vistas
+Por cada CRUD que creamos, generalmente se crean cuatro vistas principales:
+
+1. **Index (Listado):**
+   Esta vista muestra una lista de todos los registros de una entidad. Suele incluir una tabla con los datos más relevantes y opciones para ver, editar o eliminar cada registro.
+
+2. **Create (Crear):**
+   Esta vista proporciona un formulario para crear un nuevo registro. Incluye campos para ingresar los datos necesarios y un botón para enviar el formulario y guardar el nuevo registro en la base de datos.
+
+3. **Edit (Editar):**
+   Similar a la vista de creación, esta vista proporciona un formulario para editar un registro existente. Los campos del formulario están pre-rellenados con los datos actuales del registro, y el usuario puede modificar estos datos y guardarlos.
+
+4. **Show (Mostrar):**
+   Esta vista muestra los detalles de un registro específico. Incluye todos los datos relevantes del registro y, a menudo, opciones para editar o eliminar el registro.
+
+Estas vistas permiten gestionar de manera completa las operaciones de creación, lectura, actualización y eliminación (CRUD) de una entidad en una aplicación.
 
 ## Archivo .env
 ### ¿Cuál es la finalidad del archivo .env?
@@ -25,3 +40,13 @@ El archivo .env en Laravel se utiliza para almacenar configuraciones y variables
 El uso del archivo .env permite mantener estas configuraciones fuera del código fuente, facilitando la gestión de diferentes entornos y mejorando la seguridad al no incluir información sensible en el repositorio de GitHub.
 
 ## Migraciones
+### ¿Qué son las migraciones?
+
+Las migraciones en Laravel son una forma de gestionar la estructura de la base de datos de manera programática. Permiten definir y modificar tablas y columnas de la base de datos utilizando código PHP en lugar de SQL.
+
+### ¿Cómo se usan?
+
+1. **Crear una migración:**
+   Para crear una nueva migración, se utiliza el comando:
+   ```sh
+   php artisan make:migration nombre_de_la_migracion
