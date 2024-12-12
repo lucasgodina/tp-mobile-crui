@@ -6,9 +6,12 @@ En este documento, detallaremos conceptos que consideremos necesarios para defen
 
 MVC (Model-View-Controller // Modelo-Vista-Controlador) es un patrón de diseño de software que separa una aplicación en tres componentes principales.
 
-1. **Modelo (Model):** Representa los datos y la lógica de negocio de la aplicación. Se encarga de gestionar el acceso y la manipulación de los datos.
-2. **Vista (View):** Es la interfaz de usuario. Se encarga de presentar los datos al usuario y de recibir la interacción del usuario.
-3. **Controlador (Controller):** Actúa como intermediario entre el modelo y la vista. Recibe las entradas del usuario desde la vista, procesa la lógica de negocio a través del modelo y actualiza la vista con los datos resultantes.
+1. **Modelo (Model):** 
+   Representa los datos y la lógica de negocio de la aplicación. Se encarga de gestionar el acceso y la manipulación de los datos.
+2. **Vista (View):**
+   Es la interfaz de usuario. Se encarga de presentar los datos al usuario y de recibir la interacción del usuario.
+3. **Controlador (Controller):**
+   Actúa como intermediario entre el modelo y la vista. Recibe las entradas del usuario desde la vista, procesa la lógica de negocio a través del modelo y actualiza la vista con los datos resultantes.
 
 ### Vistas
 Por cada CRUD que creamos, generalmente se crean cuatro vistas principales:
@@ -27,17 +30,55 @@ Por cada CRUD que creamos, generalmente se crean cuatro vistas principales:
 
 Estas vistas permiten gestionar de manera completa las operaciones de creación, lectura, actualización y eliminación (CRUD) de una entidad en una aplicación.
 
-## Archivo .env
-### ¿Cuál es la finalidad del archivo .env?
+## Rutas
+### ¿Qué son las rutas?
+En Laravel, las rutas son definiciones que indican cómo las solicitudes HTTP deben ser manejadas por la aplicaciones. Se definen en el archivo web.php dentro del directorio routes.
+Existen rutas de distintos tipos:
 
-El archivo .env en Laravel se utiliza para almacenar configuraciones y variables de entorno que son específicas del entorno de desarrollo, pruebas o producción. Estas variables pueden incluir:
 
-- Configuraciones de la base de datos
-- Claves API
-- Configuraciones de correo electrónico
-- Otros parámetros de configuración sensibles
+1. **Rutas GET:**
+   Se utilizan para obtener datos del servidor. Por ejemplo, para mostrar una lista de recursos o una página específica.
+   ```php
+   Route::get('/ruta', [Controlador::class, 'metodo']);
+   ```
+2. **Rutas POST:**
+   Se utilizan para enviar datos al servidor, generalmente para crear un nuevo recurso.
 
-El uso del archivo .env permite mantener estas configuraciones fuera del código fuente, facilitando la gestión de diferentes entornos y mejorando la seguridad al no incluir información sensible en el repositorio de GitHub.
+   ```php
+   Route::post('/ruta', [Controlador::class, 'metodo']);
+   ```
+3. **Rutas PUT/PATCH:**
+   Se utilizan para actualizar un recurso existente. PUT se usa para actualizaciones completas, mientras que PATCH se usa para actualizaciones parciales.
+   ```php
+   Route::put('/ruta/{id}', [Controlador::class, 'metodo']);
+   Route::patch('/ruta/{id}', [Controlador::class, 'metodo']);
+   ```
+4. **Rutas DELETE:**
+   Se utilizan para eliminar un recurso existente.
+   ```php
+   Route::delete('/ruta/{id}', [Controlador::class, 'metodo']);
+   ```
+
+### Método Route::resource
+El método Route::resource se utiliza para definir todas las rutas necesarias para un controlador de recursos en una sola linea. Esto es útil para controladores que siguen el patrón CRUD.
+
+```php
+
+Route::resource('juegos', JuegoController::class);
+Route::resource('equipos', EquipoController::class);
+```
+
+Estas líneas definen automáticamente las siguientes rutas para los controladores JuegoController y EquipoController:
+
+- GET /juegos - index método para listar todos los juegos.
+- GET /juegos/create - create método para mostrar el formulario de creación.
+- POST /juegos - store método para guardar un nuevo juego.
+- GET /juegos/{juego} - show método para mostrar un juego específico.
+- GET /juegos/{juego}/edit - edit método para mostrar el formulario de edición.
+- PUT/PATCH /juegos/{juego} - update método para actualizar un juego específico.
+- DELETE /juegos/{juego} - destroy método para eliminar un juego específico.
+
+
 
 ## Migraciones
 ### ¿Qué son las migraciones?
@@ -63,3 +104,15 @@ Las migraciones en Laravel son una forma de gestionar la estructura de la base d
    ```sh
    php artisan migrate:rollback
    ```
+
+## Archivo .env
+### ¿Cuál es la finalidad del archivo .env?
+
+El archivo .env en Laravel se utiliza para almacenar configuraciones y variables de entorno que son específicas del entorno de desarrollo, pruebas o producción. Estas variables pueden incluir:
+
+- Configuraciones de la base de datos
+- Claves API
+- Configuraciones de correo electrónico
+- Otros parámetros de configuración sensibles
+
+El uso del archivo .env permite mantener estas configuraciones fuera del código fuente, facilitando la gestión de diferentes entornos y mejorando la seguridad al no incluir información sensible en el repositorio de GitHub.
