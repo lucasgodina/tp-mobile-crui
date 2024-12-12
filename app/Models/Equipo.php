@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Equipo extends Model
 {
     use HasFactory;
-    
+
     protected $fillable = [
         'nombre',
         'email',
@@ -17,10 +17,10 @@ class Equipo extends Model
         'victorias',
         'juego_id',
     ];
-    
+
     public function juego()
     {
         return $this->belongsTo(Juego::class, "juego_id");
-        /* establece la relación 1 juego 1 equipo (1 a 1) */
+        // Establece la relación 1 equipo tiene 1 único juego (1 a 1)
     }
 }
