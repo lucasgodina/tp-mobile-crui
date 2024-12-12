@@ -70,13 +70,13 @@ Route::resource('equipos', EquipoController::class);
 
 Estas líneas definen automáticamente las siguientes rutas para los controladores JuegoController y EquipoController:
 
-- GET /juegos - index método para listar todos los juegos.
-- GET /juegos/create - create método para mostrar el formulario de creación.
-- POST /juegos - store método para guardar un nuevo juego.
-- GET /juegos/{juego} - show método para mostrar un juego específico.
-- GET /juegos/{juego}/edit - edit método para mostrar el formulario de edición.
-- PUT/PATCH /juegos/{juego} - update método para actualizar un juego específico.
-- DELETE /juegos/{juego} - destroy método para eliminar un juego específico.
+- GET /juegos - "index" método para listar todos los juegos.
+- GET /juegos/create - "create" método para mostrar el formulario de creación.
+- POST /juegos - "store" método para guardar un nuevo juego.
+- GET /juegos/{juego} - "show" método para mostrar un juego específico.
+- GET /juegos/{juego}/edit - "edit" método para mostrar el formulario de edición.
+- PUT/PATCH /juegos/{juego} - "update" método para actualizar un juego específico.
+- DELETE /juegos/{juego} - "destroy" método para eliminar un juego específico.
 
 
 
