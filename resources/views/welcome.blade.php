@@ -27,7 +27,6 @@
             margin: 0 auto;
             padding: 50px;
         }
-
     </style>
 </head>
 

@@ -21,7 +21,7 @@
                     <th scope="col">Acciones</th>
                 </thead>
                 <tbody>
-                    @foreach ($juegos as $juego)
+                    @foreach ($juegos as $juego) {{-- Recorremos los juegos --}}
                     <tr>
                         <td>{{ $juego->id }}</td>
                         <td>{{ $juego->nombre }}</td>

@@ -34,6 +34,9 @@ class EquipoController extends Controller
         if ($juegos->isEmpty()) {
             return redirect()->route('equipos.index')->with('error', 'No se puede crear un equipo porque no hay juegos disponibles.');
         }
+
+        // Crear un nuevo registro
+
         return view('equipos.create', compact('juegos'));
     }
 
