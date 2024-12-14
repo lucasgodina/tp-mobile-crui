@@ -21,6 +21,6 @@ class Equipo extends Model
     public function juego()
     {
         return $this->belongsTo(Juego::class, "juego_id");
-        // Establece la relación 1 equipo tiene 1 único juego (1 a 1)
+        // Establece la relación, 1 equipo tiene 1 único juego (1 a 1)
     }
 }
