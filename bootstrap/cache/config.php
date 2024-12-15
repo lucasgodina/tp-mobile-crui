@@ -12,12 +12,12 @@
     'url' => 'http://localhost',
     'frontend_url' => 'http://localhost:3000',
     'asset_url' => NULL,
-    'timezone' => 'UTC',
+    'timezone' => 'America/Argentina/Buenos_Aires',
     'locale' => 'es',
     'fallback_locale' => 'en',
     'faker_locale' => 'es_AR',
     'cipher' => 'AES-256-CBC',
-    'key' => 'base64:KKatGuXyi6ZXy/xK9uYXV8IRoXcOsYmNDAtfyJIWhVQ=',
+    'key' => 'base64:3hDWj9EJluAzBnBqHn4fKLawY381/HZGjuK5k9zBsug=',
     'previous_keys' =>
     array(),
     'maintenance' =>
@@ -156,8 +156,8 @@
       'file' =>
       array(
         'driver' => 'file',
-        'path' => 'C:\\laragon\\www\\tp-mobile-crui\\storage\\framework/cache/data',
-        'lock_path' => 'C:\\laragon\\www\\tp-mobile-crui\\storage\\framework/cache/data',
+        'path' => '/opt/lampp/htdocs/tp-mobile-crui/storage/framework/cache/data',
+        'lock_path' => '/opt/lampp/htdocs/tp-mobile-crui/storage/framework/cache/data',
       ),
       'memcached' =>
       array(
@@ -326,14 +326,14 @@
       'local' =>
       array(
         'driver' => 'local',
-        'root' => 'C:\\laragon\\www\\tp-mobile-crui\\storage\\app/private',
+        'root' => '/opt/lampp/htdocs/tp-mobile-crui/storage/app/private',
         'serve' => true,
         'throw' => false,
       ),
       'public' =>
       array(
         'driver' => 'local',
-        'root' => 'C:\\laragon\\www\\tp-mobile-crui\\storage\\app/public',
+        'root' => '/opt/lampp/htdocs/tp-mobile-crui/storage/app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -353,7 +353,7 @@
     ),
     'links' =>
     array(
-      'C:\\laragon\\www\\tp-mobile-crui\\public\\storage' => 'C:\\laragon\\www\\tp-mobile-crui\\storage\\app/public',
+      '/opt/lampp/htdocs/tp-mobile-crui/public/storage' => '/opt/lampp/htdocs/tp-mobile-crui/storage/app/public',
     ),
   ),
   'logging' =>
@@ -378,14 +378,14 @@
       'single' =>
       array(
         'driver' => 'single',
-        'path' => 'C:\\laragon\\www\\tp-mobile-crui\\storage\\logs/laravel.log',
+        'path' => '/opt/lampp/htdocs/tp-mobile-crui/storage/logs/laravel.log',
         'level' => 'debug',
         'replace_placeholders' => true,
       ),
       'daily' =>
       array(
         'driver' => 'daily',
-        'path' => 'C:\\laragon\\www\\tp-mobile-crui\\storage\\logs/laravel.log',
+        'path' => '/opt/lampp/htdocs/tp-mobile-crui/storage/logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
         'replace_placeholders' => true,
@@ -450,7 +450,7 @@
       ),
       'emergency' =>
       array(
-        'path' => 'C:\\laragon\\www\\tp-mobile-crui\\storage\\logs/laravel.log',
+        'path' => '/opt/lampp/htdocs/tp-mobile-crui/storage/logs/laravel.log',
       ),
     ),
   ),
@@ -526,7 +526,7 @@
       'theme' => 'default',
       'paths' =>
       array(
-        0 => 'C:\\laragon\\www\\tp-mobile-crui\\resources\\views/vendor/mail',
+        0 => '/opt/lampp/htdocs/tp-mobile-crui/resources/views/vendor/mail',
       ),
     ),
   ),
@@ -621,7 +621,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\laragon\\www\\tp-mobile-crui\\storage\\framework/sessions',
+    'files' => '/opt/lampp/htdocs/tp-mobile-crui/storage/framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -743,28 +743,28 @@
   array(
     'paths' =>
     array(
-      0 => 'C:\\laragon\\www\\tp-mobile-crui\\resources\\views',
+      0 => '/opt/lampp/htdocs/tp-mobile-crui/resources/views',
     ),
-    'compiled' => 'C:\\laragon\\www\\tp-mobile-crui\\storage\\framework\\views',
+    'compiled' => '/opt/lampp/htdocs/tp-mobile-crui/storage/framework/views',
   ),
   'localization-private' =>
   array(
     'plugins' =>
     array(
-      'C:\\laragon\\www\\tp-mobile-crui\\vendor\\laravel-lang\\actions' =>
+      '/opt/lampp/htdocs/tp-mobile-crui/vendor/laravel-lang/actions' =>
       array(
         0 => 'LaravelLang\\Actions\\Plugins\\Main',
       ),
-      'C:\\laragon\\www\\tp-mobile-crui\\vendor\\laravel-lang\\attributes' =>
+      '/opt/lampp/htdocs/tp-mobile-crui/vendor/laravel-lang/attributes' =>
       array(
         0 => 'LaravelLang\\Attributes\\Plugins\\Laravel',
         1 => 'LaravelLang\\Attributes\\Plugins\\Lumen',
       ),
-      'C:\\laragon\\www\\tp-mobile-crui\\vendor\\laravel-lang\\http-statuses' =>
+      '/opt/lampp/htdocs/tp-mobile-crui/vendor/laravel-lang/http-statuses' =>
       array(
         0 => 'LaravelLang\\HttpStatuses\\Plugins\\Main',
       ),
-      'C:\\laragon\\www\\tp-mobile-crui\\vendor\\laravel-lang\\lang' =>
+      '/opt/lampp/htdocs/tp-mobile-crui/vendor/laravel-lang/lang' =>
       array(
         0 => 'LaravelLang\\Lang\\Plugins\\Breeze\\Master',
         1 => 'LaravelLang\\Lang\\Plugins\\Breeze\\V2',
@@ -787,22 +787,22 @@
     ),
     'packages' =>
     array(
-      'C:\\laragon\\www\\tp-mobile-crui\\vendor\\laravel-lang\\actions' =>
+      '/opt/lampp/htdocs/tp-mobile-crui/vendor/laravel-lang/actions' =>
       array(
         'class' => 'LaravelLang\\Actions\\Plugin',
         'name' => 'laravel-lang/actions',
       ),
-      'C:\\laragon\\www\\tp-mobile-crui\\vendor\\laravel-lang\\attributes' =>
+      '/opt/lampp/htdocs/tp-mobile-crui/vendor/laravel-lang/attributes' =>
       array(
         'class' => 'LaravelLang\\Attributes\\Plugin',
         'name' => 'laravel-lang/attributes',
       ),
-      'C:\\laragon\\www\\tp-mobile-crui\\vendor\\laravel-lang\\http-statuses' =>
+      '/opt/lampp/htdocs/tp-mobile-crui/vendor/laravel-lang/http-statuses' =>
       array(
         'class' => 'LaravelLang\\HttpStatuses\\Plugin',
         'name' => 'laravel-lang/http-statuses',
       ),
-      'C:\\laragon\\www\\tp-mobile-crui\\vendor\\laravel-lang\\lang' =>
+      '/opt/lampp/htdocs/tp-mobile-crui/vendor/laravel-lang/lang' =>
       array(
         'class' => 'LaravelLang\\Lang\\Plugin',
         'name' => 'laravel-lang/lang',
@@ -810,7 +810,7 @@
     ),
     'models' =>
     array(
-      'directory' => 'C:\\laragon\\www\\tp-mobile-crui\\app',
+      'directory' => '/opt/lampp/htdocs/tp-mobile-crui/app',
     ),
     'map' =>
     array(
@@ -1530,7 +1530,7 @@
       array(
         'enabled' => true,
       ),
-      'helpers' => 'C:\\laragon\\www\\tp-mobile-crui\\vendor/_laravel_lang',
+      'helpers' => '/opt/lampp/htdocs/tp-mobile-crui/vendor/_laravel_lang',
     ),
     'translators' =>
     array(

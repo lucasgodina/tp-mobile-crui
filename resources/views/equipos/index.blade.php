@@ -31,7 +31,7 @@
                         <td>{{ $equipo->id }}</td>
                         <td>{{ $equipo->nombre }}</td>
                         <td>{{ $equipo->email }}</td>
-                        <td>{{ \Carbon\Carbon::parse($equipo->fecha_fundacion)->format('d/m/Y') }}</td>
+                        <td>{{ \Carbon\Carbon::parse($equipo->fecha_fundacion)->format('d/m/Y') }}</td> {{-- Formateamos la fecha --}}
                         <td>{{ $equipo->activo ? 'Sí' : 'No' }}</td>
                         <td>{{ $equipo->victorias }}</td>
                         <td>{{ $equipo->juego->nombre }}</td>

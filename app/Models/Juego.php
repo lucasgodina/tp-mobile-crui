@@ -13,5 +13,6 @@ class Juego extends Model
     public function equipos()
     {
         return $this->hasMany(Equipo::class, "juego_id");
+        // Establece la relación, 1 juego puede ser usado por muchos equipos (1 a muchos) 
     }
 }
